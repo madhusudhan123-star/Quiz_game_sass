@@ -1,0 +1,92 @@
+$primer-color: #44e5e7
+$secondary-color: #73fbd3
+$first-color: #59d2fe
+$second-color: #4a8fe7
+
+$font-size_2rem: 2rem
+$font-size_1rem: 1.8rem
+$font-size_13rem: 1.3rem
+$font-size_5rem: 5rem
+
+body
+    background: $primer-color
+
+    // loading display
+#loader
+    border: 0.6rem solid $second-color
+    border-radius: 50%
+    border-top: 0.6rem solid white
+    width: 4rem
+    height: 4rem
+    position: absolute
+    top: 40%
+    left: 45%
+    transform: translateX(-50%)
+    animation: spin 2s linear infinite
+
+@keyframes spin
+    0%
+        transform: rotate(0deg)
+
+    100%
+        transform: rotate(360deg)
+
+// Question  display
+#Question_title
+    display: flex
+    justify-content: center
+    font-size: $font-size_2rem
+    font-weight: 600
+
+// Choices  
+#choice
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    .choice-text
+        font-size: $font-size_2rem
+        padding: 2rem
+        box-shadow: inset 0 0 0 0 $second-color
+        transition: ease-out 1s
+        &:hover
+            box-shadow: inset 700px 0 0 0 $second-color
+
+// Correct or not answer for 2seconds 
+.result
+    display: flex
+    justify-content: center
+    font-size: $font-size_1rem
+    font-weight: 700
+.hidden
+    display: none
+
+// Score display and Rules display 
+#score
+    display: none
+
+#score_
+    font-size: $font-size_13rem
+
+    #score_display
+        display: flex
+        justify-content: center
+
+    #scoretext
+        display: flex
+        justify-content: center
+        font-size: $font-size_5rem
+
+// Replay Button
+    #play_btn_div
+        padding-top: 2rem
+        display: flex
+        justify-content: center
+        #playbtn
+            width: 9rem
+            height: 4rem
+            border-radius: 2rem
+            border: none
+            box-shadow: outset 0 0 0 0 $second-color
+            transition: ease-in 1s
+#playbtn:hover
+    background: $second-color
