@@ -82,6 +82,19 @@ body {
   justify-content: center;
   font-size: 5rem;
 }
+#score_ #play_btn_div {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+#score_ #play_btn_div #playbtn {
+  width: 9rem;
+  height: 4rem;
+  border-radius: 2rem;
+  border: none;
+  box-shadow: outset 0 0 0 0 #4a8fe7;
+  transition: ease-in 1s;
+}
 
 #playbtn:hover {
   background: #4a8fe7;
